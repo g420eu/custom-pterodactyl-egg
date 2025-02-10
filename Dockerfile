@@ -5,6 +5,8 @@
 # ----------------------------------
 FROM debian:stable
 
+RUN apt-get update && apt-get install -y wget
+
 USER container
 ENV  USER=container HOME=/home/container
 
