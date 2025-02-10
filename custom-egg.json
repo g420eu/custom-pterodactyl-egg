@@ -1,0 +1,31 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2025-02-10T17:33:37+01:00",
+    "name": "G420EU Custom Egg",
+    "author": "isgalvez24@gmail.com",
+    "description": "Selfmade Pterodactyl custom Egg for g420.eu",
+    "features": null,
+    "docker_images": {
+        "AC Penalty": "ghcr.io\/g420eu\/custom-egg:latest"
+    },
+    "file_denylist": [],
+    "startup": ".\/ac_penalty",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"Server startup complete\"\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\n# steamcmd Base Installation Script\r\n#\r\n# Server Files: \/mnt\/server\r\n\r\ncd \/mnt\/server\r\ncurl -L https:\/\/g420.eu\/RealPenalty_ServerPlugin_v.4.09.02_0001.tar -o source.tar\r\ntar -xvf source.tar\r\nrm source.tar\r\n\r\nchmod +x ac_penalty",
+            "container": "ghcr.io\/pterodactyl\/installers:debian",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": []
+}
