@@ -1,0 +1,26 @@
+name: Build and Push Image to GHCR
+
+on:
+  push:
+    branches:
+      - main  # Se ejecuta cuando haces push a `main`
+  workflow_dispatch:  # Permite ejecutarlo manualmente desde la pestaña "Actions"
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log in to GitHub Container Registry
+        run: echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Build Docker image
+        run: |
+          docker build -t ghcr.io/${{ github.repository }}/penalty-egg:latest .
+
+      - name: Push Docker image
+        run: |
+          docker push ghcr.io/${{ github.repository }}/penalty-egg:latest
