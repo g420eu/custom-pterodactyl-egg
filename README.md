@@ -4,7 +4,7 @@
 
 Made by **Ism1tha**
 
-A professional Pterodactyl egg setup that provides a reliable environment for managing penalties.
+A professional Pterodactyl egg image template (Docker) for the G420 Community.
 
 > An image will be generated automatically after each push.
 
@@ -16,4 +16,4 @@ A professional Pterodactyl egg setup that provides a reliable environment for ma
 - Customizable settings
 - User-friendly interface
 
-Based on the [Pterodactyl Egg Documentation](https://pterodactyl.io/eggs)
+Based on the [Pterodactyl Egg Documentation](https://pterodactyl.io/community/config/eggs/creating_a_custom_egg.html)
