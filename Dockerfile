@@ -3,7 +3,7 @@
 # Environment: Java
 # Minimum Panel Version: 0.6.0
 # ----------------------------------
-FROM debian:lastest
+FROM debian:stable
 
 USER container
 ENV  USER=container HOME=/home/container
