@@ -5,7 +5,7 @@
 # ----------------------------------
 FROM debian:stable
 
-RUN apt-get update && apt-get install -y libssl3
+RUN apt-get update && apt-get install -y libssl3 libicu63
 
 USER container
 ENV  USER=container HOME=/home/container
