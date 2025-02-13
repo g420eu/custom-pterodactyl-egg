@@ -5,7 +5,7 @@
 # ----------------------------------
 FROM debian:stable
 
-RUN apt-get update && apt-get install -y libssl3 libicu-dev
+RUN apt-get update && apt-get install -y libssl3 libicu-dev openssl
 
 USER container
 ENV  USER=container HOME=/home/container
