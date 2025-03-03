@@ -3,8 +3,8 @@ name: Build and Push Image to GHCR
 on:
   push:
     branches:
-      - main  # Se ejecuta cuando haces push a `main`
-  workflow_dispatch:  # Permite ejecutarlo manualmente desde la pestaña "Actions"
+      - main
+  workflow_dispatch:
 
 jobs:
   build-and-push:
